@@ -14,7 +14,7 @@ const CoursePage = () => {
   useEffect(() => {
     const loadCourse = async () => {
       try {
-        // Получаем все курсы и находим нужный по ID
+        // получаем все курсы и находим нужный по ID
         const response = await coursesAPI.getAll();
         const foundCourse = response.data.find(c => c.id === parseInt(id));
         if (foundCourse) {

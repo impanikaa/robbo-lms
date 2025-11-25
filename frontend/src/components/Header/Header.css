@@ -62,7 +62,6 @@
   opacity: 0.8;
 }
 
-/* Адаптивность для мобильных */
 @media (max-width: 768px) {
   .header__container {
     flex-direction: column;
@@ -75,7 +74,7 @@
   }
   
   .header__nav-link {
-    font-size: 1.25rem; /* Немного меньше на мобильных */
+    font-size: 1.25rem;
   }
 }
 

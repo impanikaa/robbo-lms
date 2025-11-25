@@ -13,12 +13,12 @@
   margin-bottom: 32px;
   text-align: left;
   color: var(--dark-grey);
-  flex-shrink: 0; /* Не сжимаем заголовок */
+  flex-shrink: 0;
 }
 
 .form-section {
   margin-bottom: 28px;
-  flex-shrink: 0; /* Не сжимаем поля формы */
+  flex-shrink: 0;
 }
 
 .form-section h2 {
@@ -66,7 +66,7 @@
   resize: vertical;
   min-height: 120px;
   font-family: var(--font-primary);
-  flex-shrink: 0; /* Не сжимаем текстовую область */
+  flex-shrink: 0;
 }
 
 .form-textarea:focus {
@@ -85,10 +85,10 @@
   display: flex;
   justify-content: flex-end;
   gap: 16px;
-  margin-top: auto; /* Прижимаем кнопки к низу */
+  margin-top: auto;
   padding-top: 24px;
   border-top: 1px solid #e5e5e5;
-  flex-shrink: 0; /* Не сжимаем кнопки */
+  flex-shrink: 0;
 }
 
 .btn-cancel {

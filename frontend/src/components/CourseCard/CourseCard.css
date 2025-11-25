@@ -5,10 +5,10 @@
   transition: all 0.3s ease;
   cursor: pointer;
   border: 1px solid transparent;
-  height: 360px; /* Увеличиваем высоту для большего описания */
+  height: 360px;
   display: flex;
   flex-direction: column;
-  position: relative; /* Для позиционирования кнопок */
+  position: relative;
 }
 
 .course-card:hover {
@@ -36,7 +36,7 @@
   display: flex;
   flex-direction: column;
   text-align: left;
-  min-height: 0; /* Важно для правильного flex-распределения */
+  min-height: 0;
 }
 
 .course-card__title {

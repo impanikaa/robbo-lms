@@ -83,7 +83,6 @@
   color: var(--dark-grey);
 }
 
-/* Адаптивность */
 @media (max-width: 768px) {
   .course-page__content {
     grid-template-columns: 1fr;

@@ -58,7 +58,6 @@
   font-weight: 700;
 }
 
-/* Адаптивность для мобильных */
 @media (max-width: 768px) {
   .footer__container {
     flex-direction: column;
@@ -80,6 +79,6 @@
   }
   
   .footer__link {
-    font-size: 1.25rem; /* Немного меньше на мобильных */
+    font-size: 1.25rem;
   }
 }

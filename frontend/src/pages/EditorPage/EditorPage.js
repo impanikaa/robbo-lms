@@ -91,7 +91,7 @@ const EditorPage = () => {
             onEditCourse={handleEditCourse}
             showActions={true}
             isEditor={true}
-            onCourseClick={handleCourseClick} // Добавляем обработчик клика
+            onCourseClick={handleCourseClick}
           />
         );
 

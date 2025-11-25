@@ -14,7 +14,7 @@
   border-radius: 16px;
   box-shadow: 0 8px 40px rgba(0, 0, 0, 0.08);
   overflow: hidden;
-  height: 80vh; /* Фиксируем высоту контейнера */
+  height: 80vh;
   min-height: 600px;
   max-height: 800px;
 }
@@ -23,7 +23,7 @@
   flex: 1;
   padding: 40px;
   background: var(--white);
-  overflow-y: auto; /* Включаем скролл внутри рабочей области */
+  overflow-y: auto;
   display: flex;
   flex-direction: column;
 }
@@ -83,10 +83,9 @@
   border-radius: 8px;
   margin-bottom: 24px;
   border: 1px solid rgba(255, 107, 107, 0.2);
-  flex-shrink: 0; /* Не сжимаем сообщение об ошибке */
+  flex-shrink: 0;
 }
 
-/* Специальные стили для CourseGrid внутри редактора */
 .editor-content .course-grid {
   flex: 1;
   overflow-y: auto;
@@ -94,7 +93,6 @@
   margin: 0;
 }
 
-/* Специальные стили для формы внутри редактора */
 .editor-content .course-form {
   margin: 0;
   flex: 1;
@@ -102,7 +100,6 @@
   flex-direction: column;
 }
 
-/* Адаптивность */
 @media (max-width: 1024px) {
   .editor-page__container {
     width: 95%;
