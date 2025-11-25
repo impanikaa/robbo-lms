@@ -1,0 +1,134 @@
+.course-card {
+  background: var(--white);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 1px solid transparent;
+  height: 360px; /* Увеличиваем высоту для большего описания */
+  display: flex;
+  flex-direction: column;
+  position: relative; /* Для позиционирования кнопок */
+}
+
+.course-card:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  transform: translateY(-4px);
+}
+
+.course-card__image {
+  width: 100%;
+  height: 160px;
+  padding: 16px 16px 0 16px;
+  flex-shrink: 0;
+}
+
+.course-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.course-card__content {
+  padding: 16px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  min-height: 0; /* Важно для правильного flex-распределения */
+}
+
+.course-card__title {
+  font-family: var(--font-primary);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: var(--dark-grey);
+  line-height: 1.3;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.course-card__description {
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  color: var(--light-grey);
+  font-weight: 400;
+  margin-bottom: 16px;
+  display: -webkit-box;
+  line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: 1.4;
+  flex: 1;
+  min-height: 0;
+}
+
+.course-card__actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+  margin-top: auto;
+  flex-shrink: 0;
+}
+
+.course-card__btn {
+  background: var(--white);
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  position: relative;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.course-card__btn:hover {
+  background: var(--green);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-1px);
+}
+
+.course-card__icon {
+  width: 18px;
+  height: 18px;
+  color: var(--green);
+  transition: color 0.3s ease;
+}
+
+.course-card__btn:hover .course-card__icon {
+  color: var(--white);
+}
+
+.course-card__btn:hover::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--dark-grey);
+  color: var(--white);
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  z-index: 10;
+  margin-bottom: 8px;
+}
+
+.course-card__btn:hover::before {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 4px solid transparent;
+  border-top-color: var(--dark-grey);
+  margin-bottom: 0;
+}

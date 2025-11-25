@@ -1,0 +1,70 @@
+.editor-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 32px 20px;
+  background: var(--white);
+  min-width: 100px;
+  align-items: center;
+  border-right: 1px solid #f0f0f0;
+}
+
+.editor-sidebar__btn {
+  background: var(--white);
+  border: none;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.editor-sidebar__btn:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  background: var(--green);
+}
+
+.editor-sidebar__btn.active {
+  background: var(--green);
+}
+
+.editor-sidebar__icon {
+  width: 24px;
+  height: 24px;
+  color: var(--green);
+  transition: color 0.3s ease;
+}
+
+.editor-sidebar__btn:hover .editor-sidebar__icon,
+.editor-sidebar__btn.active .editor-sidebar__icon {
+  color: var(--white);
+}
+
+.editor-sidebar__btn:hover::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  left: 70px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--dark-grey);
+  color: var(--white);
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  white-space: nowrap;
+  z-index: 10;
+}
+
+.editor-sidebar__btn:hover::before {
+  content: '';
+  position: absolute;
+  left: 66px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 6px solid transparent;
+  border-right-color: var(--dark-grey);
+}

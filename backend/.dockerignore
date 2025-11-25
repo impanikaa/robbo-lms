@@ -1,0 +1,14 @@
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+.DS_Store
+.git
+*.log
+*.pot
+*.pyc
+*.pyo
+*.pyd
+__pycache__

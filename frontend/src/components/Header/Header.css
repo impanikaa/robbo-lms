@@ -1,0 +1,87 @@
+.header {
+  background-color: var(--white);
+  border-bottom: 1px solid var(--light-grey);
+  padding: var(--spacing-sm) 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.header__logo-img {
+  height: 32px;
+  width: auto;
+}
+
+.header__nav {
+  display: flex;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+
+.header__nav-link {
+  color: var(--dark-grey);
+  text-decoration: none;
+  font-family: var(--font-condensed);
+  font-size: var(--h2-size);
+  font-weight: 600;
+  transition: color 0.3s ease;
+  padding: var(--spacing-xs) 0;
+}
+
+.header__nav-link:hover {
+  color: var(--green);
+}
+
+.header__login-btn {
+  background: none;
+  border: none;
+  color: var(--green);
+  cursor: pointer;
+  font-family: var(--font-primary);
+  font-size: var(--button-size);
+  font-weight: 400;
+  padding: 0;
+  transition: opacity 0.3s ease;
+}
+
+.header__login-btn:hover {
+  opacity: 0.8;
+}
+
+/* Адаптивность для мобильных */
+@media (max-width: 768px) {
+  .header__container {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .header__nav {
+    gap: var(--spacing-md);
+    justify-content: center;
+  }
+  
+  .header__nav-link {
+    font-size: 1.25rem; /* Немного меньше на мобильных */
+  }
+}
+
+@media (max-width: 480px) {
+  .header__nav {
+    flex-direction: column;
+    gap: var(--spacing-xs);
+  }
+}

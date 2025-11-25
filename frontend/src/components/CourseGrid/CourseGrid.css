@@ -1,0 +1,40 @@
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  padding: 20px 0;
+}
+
+.course-grid--editor {
+  grid-template-columns: repeat(3, 1fr);
+  padding: 0;
+  margin: 0;
+}
+
+/* Адаптивность */
+@media (max-width: 1200px) {
+  .course-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .course-grid--editor {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .course-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  
+  .course-grid--editor {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .course-grid {
+    grid-template-columns: 1fr;
+  }
+}
